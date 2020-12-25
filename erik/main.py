@@ -8,7 +8,7 @@ if platform == 'android':
 
 from screens.send import SendScreen
 from screens.receive import ReceiveScreen
-from screens.main import MainScreen
+from screens.mainscreen import MainScreen
 
 
 class MainApp(MDApp):
