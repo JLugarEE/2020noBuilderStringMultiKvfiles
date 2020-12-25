@@ -1,0 +1,54 @@
+(kivyENV) C:\Users\madeI\KivyApps\phoneApp\fearless\2020separateKVs\erik>for /f "usebackq" %A in (`dir /s /b main*.kv main*.py`) do @find /n /i "include" %A
+
+---------- C:\USERS\MADEI\KIVYAPPS\PHONEAPP\FEARLESS\2020SEPARATEKVS\ERIK\MAIN.KV
+[1]#:include screens/receivescreen.kv
+[2]#:include screens/sendscreen.kv
+
+---------- C:\USERS\MADEI\KIVYAPPS\PHONEAPP\FEARLESS\2020SEPARATEKVS\ERIK\MAIN.PY
+---------- C:\USERS\MADEI\KIVYAPPS\PHONEAPP\FEARLESS\2020SEPARATEKVS\ERIK\SCREENS\MAINSCREEN.KV
+---------- C:\USERS\MADEI\KIVYAPPS\PHONEAPP\FEARLESS\2020SEPARATEKVS\ERIK\SCREENS\MAINSCREEN.PY
+
+(kivyENV) C:\Users\madeI\KivyApps\phoneApp\fearless\2020separateKVs\erik>for /f "usebackq" %A in (`dir /s /b main*.kv main*.py`) do @find /n /i "sm" %A
+
+---------- C:\USERS\MADEI\KIVYAPPS\PHONEAPP\FEARLESS\2020SEPARATEKVS\ERIK\MAIN.KV
+[25]                on_release: app.sm.current = 'send_screen'
+[31]                on_release: app.sm.current = 'receive_screen'
+
+---------- C:\USERS\MADEI\KIVYAPPS\PHONEAPP\FEARLESS\2020SEPARATEKVS\ERIK\MAIN.PY
+[18]        self.sm = ScreenManager()									<<<====<<<< Need this and 
+[19]        self.sm.add_widget(MainScreen(name='main_screen'))
+[20]        self.sm.add_widget(SendScreen(name='send_screen'))
+[21]        self.sm.add_widget(ReceiveScreen(name='receive_screen'))
+[22]        return self.sm										<<<====<<<< THIS  in ERIK #2 
+
+---------- C:\USERS\MADEI\KIVYAPPS\PHONEAPP\FEARLESS\2020SEPARATEKVS\ERIK\SCREENS\MAINSCREEN.KV
+[21]                on_release: app.sm.current = 'send_screen'
+[27]                on_release: app.sm.current = 'receive_screen'
+
+---------- C:\USERS\MADEI\KIVYAPPS\PHONEAPP\FEARLESS\2020SEPARATEKVS\ERIK\SCREENS\MAINSCREEN.PY
+
+============================ erik #1 above =============================    ERIK2 below    ==================================================================
+
+(kivyENV) C:\Users\madeI\KivyApps\phoneApp\fearless\2020separateKVs\erik2>for /f "usebackq" %A in (`dir /s /b main*.kv main*.py`) do @find /n /i "include" %A
+
+---------- C:\USERS\MADEI\KIVYAPPS\PHONEAPP\FEARLESS\2020SEPARATEKVS\ERIK2\MAIN.KV
+[1]#:include screens/receivescreen.kv
+[2]#:include screens/sendscreen.kv
+[3]#:include screens/mainscreen.kv
+
+---------- C:\USERS\MADEI\KIVYAPPS\PHONEAPP\FEARLESS\2020SEPARATEKVS\ERIK2\MAIN.PY
+---------- C:\USERS\MADEI\KIVYAPPS\PHONEAPP\FEARLESS\2020SEPARATEKVS\ERIK2\SCREENS\MAINSCREEN.KV
+---------- C:\USERS\MADEI\KIVYAPPS\PHONEAPP\FEARLESS\2020SEPARATEKVS\ERIK2\SCREENS\MAINSCREEN.PY
+
+(kivyENV) C:\Users\madeI\KivyApps\phoneApp\fearless\2020separateKVs\erik2>for /f "usebackq" %A in (`dir /s /b main*.kv main*.py`) do @find /n /i "sm" %A
+
+---------- C:\USERS\MADEI\KIVYAPPS\PHONEAPP\FEARLESS\2020SEPARATEKVS\ERIK2\MAIN.KV
+[6]    id: sm											<<<=====<<<<  My first try, didn't work, know it's a return of self, but build ref is gone, hmmm.
+
+---------- C:\USERS\MADEI\KIVYAPPS\PHONEAPP\FEARLESS\2020SEPARATEKVS\ERIK2\MAIN.PY
+
+---------- C:\USERS\MADEI\KIVYAPPS\PHONEAPP\FEARLESS\2020SEPARATEKVS\ERIK2\SCREENS\MAINSCREEN.KV
+[21]                on_release: app.sm.current = 'send_screen'
+[27]                on_release: app.sm.current = 'receive_screen'
+
+---------- C:\USERS\MADEI\KIVYAPPS\PHONEAPP\FEARLESS\2020SEPARATEKVS\ERIK2\SCREENS\MAINSCREEN.PY
