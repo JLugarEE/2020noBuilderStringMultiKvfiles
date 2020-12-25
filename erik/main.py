@@ -8,18 +8,20 @@ if platform == 'android':
 
 from screens.send import SendScreen
 from screens.receive import ReceiveScreen
-
-class MainScreen(Screen):
-    pass
+from screens.main import MainScreen
 
 
 class MainApp(MDApp):
-    def build(self):
-        self.sm = ScreenManager()
-        self.sm.add_widget(MainScreen(name='main_screen'))
-        self.sm.add_widget(SendScreen(name='send_screen'))
-        self.sm.add_widget(ReceiveScreen(name='receive_screen'))
-        return self.sm
+    # Kivy has a naming convention where if your class that inherits from App
+    # (or MDApp) has a name of FooApp, it will automatically try to load foo.kv
+    # as the app's root widget.
+
+    # In this case, that means we can remove your build function, and instead
+    # put the ScreenManager as the root widget in your main.kv (since your class
+    # is named MainApp. This is a little cleaner than using the build function
+    # in my opinion.
+    pass
+
 
 if __name__ == '__main__':
     MainApp().run()
