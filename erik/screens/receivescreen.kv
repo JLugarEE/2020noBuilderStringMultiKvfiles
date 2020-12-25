@@ -1,0 +1,9 @@
+<ReceiveScreen>:
+    id: receive_screen
+    name: 'receive_screen'
+    MDRaisedButton:
+        text: 'Waiting to Receive File'
+        font_style: 'H3'
+        elevation: 10
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        on_release: app.sm.current = 'main_screen'
